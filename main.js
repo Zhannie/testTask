@@ -37,7 +37,7 @@ document.getElementById('newbutton').addEventListener('click', function() {
 			if (nametask.value == "" || nameproj.value == "" || prior.value == "" || desc.value == "") {
 
 				alert('Please fill all fields');
-				closeIt();
+
 			}else{
 
 				addItemToDOM(dataForm);
@@ -46,11 +46,12 @@ document.getElementById('newbutton').addEventListener('click', function() {
 				nameproj.value = '',
 				prior.value    = '',
 				desc.value     = '';
-		};
+
+				data.todo.push(dataForm);
+			};
 
 			template.style.display = 'none';
 			listnav.style.display = 'block';
-			data.todo.push(dataForm);
 			dataObjectUpdate();
 	});
 
@@ -98,12 +99,11 @@ function closeIt() {
 
 	for (var i = 0; i < data.todo.length; i++) {
 		if (data.todo[i].valuenametask == item.childNodes[0].textContent) {
-					data.todo.splice(i,1);
+			data.todo.splice(i,1);
 		}
 	};
 
 	dataObjectUpdate();
-
 };
 
 
@@ -119,11 +119,17 @@ function changeIt() {
 	prior.value    = item.childNodes[2].textContent;
 	desc.value     = item.childNodes[3].textContent;
 
-	document.getElementById('savenew').addEventListener('click', function() {
- 	dataForm.valuenametask = nametask.innerText;
+	if(this.value == "Save changes") {
+		console.log('ok');
+	}
 
+	if(nametask.value) {
+		document.getElementById('savenew').addEventListener('click', function() {
+ 		dataForm.valuenametask = nametask.value;
+ 		console.log(dataForm.valuenametask);
 
-	})
+	});
+	}
 };
 
 function addItemToDOM(todoItem) {
