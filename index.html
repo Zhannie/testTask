@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>To do list</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Pangolin&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="reset.css"> 
+	<link rel="stylesheet" type="text/css" href="style.css"> 
+</head>
+
+<body>
+
+	<header>todo:</header>
+
+	<div class="container">
+
+		<ul class="todo" id="list"></ul>
+		
+		<!-- <li>
+				<h2 >Task</h2>
+				<p>Project</p>
+				<p class="right">priority</p>
+				<p id="descr" class="descr">desc</p></br>
+				<div class="buttons">
+					<button class="left">Изменить</button>
+					<button>Закрыть</button>
+					<button class="right" id="swipe">Развернуть</button>
+				</div>
+			</li> -->
+	</div>
+
+	<div class="new" id="new">
+	<div class="form">
+		<div>
+			<label for="name">Название задачи</label> 
+			<input type="text" placeholder="Text input" id="nametask" required> 
+		</div>
+		<div>
+			<label for="project">Название проекта</label>
+			<input type="text" placeholder="Text input" id="nameproj" required> 
+		</div>
+		<div>
+			<label for="priority">Приоритет</label>
+			<select name="priority" id="prior">
+				<option value="1" selected>1</option>
+				<option value="2">2</option>
+			</select>
+		</div>
+		<div>
+			<label for="desc">Описание</label>
+			<textarea name="description" rows="10" id="desc" placeholder="Text area" required></textarea>
+		</div>
+		<div class="button">
+			<button id="savenew">Save changes</button>
+			<button id="cancel">Cancel</button>
+		</div>
+	</div>
+	</div>
+
+	<div class="filter" id="filter">
+		<button class="left" id="newbutton">Новая задача</button>
+		<input type="checkbox" id="byprior"/>по приоритету
+		<select class="right" id='select' name="priority">
+				<option selected>Все</option>
+				<option>Project 1</option>
+		</select>
+	</div>
+<script type="text/javascript" src="main.js"></script>
+ </body>
+</html>

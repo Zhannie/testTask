@@ -1,0 +1,149 @@
+
+body {
+	font-family: 'Pangolin', cursive;
+	font-size: 16px;
+}
+
+header {
+	font-size: 50px;
+	text-align: center;
+	padding: 60px 0px 20px;
+}
+
+.container, .new, .filter {
+	width: 50vw;
+	margin: 0px auto 15px;
+}
+
+/*main container*/
+.container {
+	height: 60vh;
+	overflow: scroll;
+	border: 1px solid black;
+}
+
+ul.todo {
+	height: auto;
+	width: 100%;
+}
+
+ul.todo li {
+	display: block;
+	text-decoration: none;
+	border: 1px solid black;
+	margin: 10px;
+	padding: 10px;
+}
+
+ul.todo li h2 {
+	font-size: 25px;
+	padding-bottom: 15px; 
+}
+
+ul.todo li p {
+	display: inline-block;
+	padding-bottom: 15px; 
+}
+
+ul.todo li p.right, button.right, select.right {
+	float: right;
+}
+
+ul.todo li p.descr {
+	display: none;
+}
+
+button.left {
+	float: left;
+}
+
+div.buttons {
+	text-align: center;
+	width: 100%;
+}
+ul.todo button {
+	padding: 5px;
+	background-color: white;
+	border-radius: 3px;
+	width: 30%;
+}
+
+ul.todo#list:empty:after {
+	content: 'You have nothing to do';
+	margin: 15px;
+}
+
+ul.todo#list:after {
+	height: 90px;
+	display: block;
+	text-align: center;
+	color: gray;
+}
+
+
+/*new task container*/
+.new {
+	display: none;
+	border: 1px solid black;
+	text-align: center;
+}
+
+.form {
+	padding: 10px;
+}
+
+.form div {
+	margin-top: 5px;
+}
+
+label {
+	display: inline-block;
+	width: 190px;
+	padding: 5px 10px 10px 10px;
+	vertical-align: top;
+	text-align: right;
+}
+
+input, select, textarea {
+	width: 250px;
+	padding: 5px 0px;
+	border: 1px solid black;
+}
+
+.form button, .filter button, .filter select, .filter input {
+	padding: 8px;
+	margin: 5px;
+	background-color: white;
+	border-radius: 3px;
+}
+
+.button {
+	text-align: right;
+	padding-right: 28%;
+}
+
+.filter {
+	text-align: center;
+	height: 50px;
+}
+
+.filter button, .filter select {
+	width: 30%;
+}
+
+.filter select {
+	height: 30px;
+}
+
+.filter input {
+	width: 10px;
+	line-height: 30px;
+	vertical-align: middle;
+}
+
+
+@media screen and (max-width: 760px) {
+	.container, .new, .filter {
+		width: 80vw;
+	}
+}
