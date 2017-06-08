@@ -33,10 +33,13 @@ document.getElementById('newbutton').addEventListener('click', function() {
 		valueproj: nameproj.value,
 		valueprior: prior.value,
 		valuedesc: desc.value
-	};
+		};
 			if (nametask.value == "" || nameproj.value == "" || prior.value == "" || desc.value == "") {
 
 				alert('Please fill all fields');
+
+			// }else if(document.getElementById('savenew').textContent === 'Update'){
+			// 	document.getElementById('savenew').addEventListener('ch')
 
 			}else{
 
@@ -113,28 +116,24 @@ function changeIt() {
 	template.style.display = 'block';
 
 	var item = this.parentNode.parentNode;
+	var updateBtn = document.getElementById('savenew')
+	updateBtn.innerText = 'Update';
 
 	nametask.value = item.childNodes[0].textContent;
 	nameproj.value = item.childNodes[1].textContent;
 	prior.value    = item.childNodes[2].textContent;
 	desc.value     = item.childNodes[3].textContent;
 
-	if(this.value == "Save changes") {
-		console.log('ok');
-	}
-
-	if(nametask.value) {
-		document.getElementById('savenew').addEventListener('click', function() {
- 		dataForm.valuenametask = nametask.value;
- 		console.log(dataForm.valuenametask);
-
-	});
-	}
+	// if(item.childNodes[0].textContent === dataForm.valuenametask) {
+	// 	return;
+	// 	}else{
+	// 		item.childNodes[0].textContent = dataForm.valuenametask;
+	// 	}
+	 
 };
 
-function addItemToDOM(todoItem) {
-	// console.log(todoItem);
-	
+
+function addItemToDOM(todoItem) {	
 	var list = document.getElementById('list');
 
 	var item = document.createElement('li');
@@ -188,23 +187,11 @@ function addItemToDOM(todoItem) {
 	item.appendChild(buttons);
 
 	var select = document.getElementById('select');
-	select.appendChild(projFilter);
 	var options = document.querySelectorAll('#select option');
-
-	var arr = [];
-
-	var arrSet = new Set();
-
-	for(var i=0; i<options.length; i++){
-		arrSet.add(options[i]);
-	};
-	arr = [...arrSet];
-	for(var i=0; i<options.length; i++){
-		options[i] = null;
-	};
-
-	for(var i=0; i<arr.length; i++){
-		select.appendChild(arr[i]);
+	for (var i = 0; i<options.length; i++) {
+		if (options[i].value !== projFilter.textContent) {
+			select.appendChild(projFilter);
+		};
 	};
 
 	list.insertBefore(item, list.childNodes[0]);
@@ -212,16 +199,17 @@ function addItemToDOM(todoItem) {
 
 // BY PRIORITY
 function compareIt(itemA, itemB) {
-	return itemA.valueprior - itemB.valueprior;
-}
+	return itemB.valueprior-itemA.valueprior;
+};
 
 document.getElementById('byprior').addEventListener('click', function() {
 	data.todo.sort(compareIt);
 
-	for (var i=0; i<data.todo.length; i++) {
-		return data.todo[i];
-	}
-})
+	dataObjectUpdate();
+	window.location.reload();
+
+});
+	
 
 
 
