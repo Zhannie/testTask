@@ -34,7 +34,11 @@ document.getElementById('newbutton').addEventListener('click', function() {
 		valueprior: prior.value,
 		valuedesc: desc.value
 	};
-			if (!!(dataForm.valuenametask)===true && !!(dataForm.valueproj) === true && !!(dataForm.valueprior) === true && !!(dataForm.valuedesc) === true) {
+			if (nametask.value == "" || nameproj.value == "" || prior.value == "" || desc.value == "") {
+
+				alert('Please fill all fields');
+				closeIt();
+			}else{
 
 				addItemToDOM(dataForm);
 
