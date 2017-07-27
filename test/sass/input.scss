@@ -1,6 +1,5 @@
 @import "variables";
 
-
 .main {
 	background: $mainBG no-repeat center center;
 	background-size: cover;
@@ -23,6 +22,7 @@
 			height: auto;
 			white-space: nowrap;
 			flex-wrap: nowrap;
+			position: relative;
 
 			div {
 				text-align: center;
@@ -34,6 +34,7 @@
 					max-width: 100%;
 					height: auto;
 					overflow-wrap: break-word;
+					word-break: break-all;
 
 					.btn {
 						border-radius: 15px;
@@ -58,6 +59,7 @@
 					border-bottom: 10px solid transparent;
 					border-image: url(../img/wavy.png) 100% 1 100% round;
 					padding-top: 15px;
+					word-break: break-all;
 				}
 
 			}
@@ -68,7 +70,9 @@
   				text-align: center;
   				background: #fff;
   				border-radius: 20px;
-  				margin-right: 10px;
+  				margin-right: 1%;
+  				height: auto;
+  				word-break: break-all;
   				&:before {
   					content: "";
 					position: absolute;
@@ -118,7 +122,7 @@
 					border: 1px dashed #dee6f0;
 					border-radius: 20px;
 					margin: 0 auto;
-					padding: 10px 10px 0;
+					padding: 1% 1% 0;
 					h2 {
 						font-size: 24px;
 						color: #dd567f;
@@ -198,6 +202,7 @@
 				text-align: justify;
 				border-bottom: 10px solid transparent;
 				border-image: url(../img/wavy.png) 100% 1 100% stretch;
+				word-break: break-all;
 			}
 
 			.qr {

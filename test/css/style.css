@@ -17,7 +17,8 @@
       margin: 0px 0px 40px 0px;
       height: auto;
       white-space: nowrap;
-      flex-wrap: nowrap; }
+      flex-wrap: nowrap;
+      position: relative; }
       .main .block .row div {
         text-align: center;
         white-space: normal;
@@ -26,7 +27,8 @@
           margin: 0 auto 28px;
           max-width: 100%;
           height: auto;
-          overflow-wrap: break-word; }
+          overflow-wrap: break-word;
+          word-break: break-all; }
           .main .block .row div .buttonBlue .btn {
             border-radius: 15px;
             border: 2px solid white;
@@ -47,7 +49,8 @@
           border-top: 10px solid transparent;
           border-bottom: 10px solid transparent;
           border-image: url(../img/wavy.png) 100% 1 100% round;
-          padding-top: 15px; }
+          padding-top: 15px;
+          word-break: break-all; }
       .main .block .row .pink {
         position: relative;
         padding: 15px;
@@ -55,7 +58,9 @@
         text-align: center;
         background: #fff;
         border-radius: 20px;
-        margin-right: 10px; }
+        margin-right: 1%;
+        height: auto;
+        word-break: break-all; }
         .main .block .row .pink:before {
           content: "";
           position: absolute;
@@ -102,7 +107,7 @@
           border: 1px dashed #dee6f0;
           border-radius: 20px;
           margin: 0 auto;
-          padding: 10px 10px 0; }
+          padding: 1% 1% 0; }
           .main .block .row .pink .innerBorder h2 {
             font-size: 24px;
             color: #dd567f; }
@@ -157,7 +162,8 @@
         line-height: 14px;
         text-align: justify;
         border-bottom: 10px solid transparent;
-        border-image: url(../img/wavy.png) 100% 1 100% stretch; }
+        border-image: url(../img/wavy.png) 100% 1 100% stretch;
+        word-break: break-all; }
       .main .block .row .qr {
         background: url("../img/qr.png") no-repeat center top;
         background-size: contain;
