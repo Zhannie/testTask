@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="chosen/chosen.min.css">
+	<title></title>
+</head>
+<body>
+
+	<aside class="md-col3">
+		<div id="category">
+			<h3>Choose Category</h3>
+			<select class="chosen-select">
+				<option>Best Match</option>
+			</select>
+		</div>
+		<div id="subCategory">
+			<h3>Choose Subcategory</h3>
+			<p>
+				<input type="checkbox" name="allCategories" id="all">
+				<label for="all">All Subcategories</label>
+			</p>
+			<p>
+				<input type="checkbox" name="data" id="data">
+				<label for="data">Data Entry <span>(1 306)</span></label>
+			</p>
+			<p>
+				<input type="checkbox" name="personal" id="personal">
+				<label for="personal">Personal Assistant <span>(1 907)</span></label>
+			</p>
+			<p>
+				<input type="checkbox" name="web" id="web">
+				<label for="web">Web Research <span>(972)</span></label>
+			</p>
+			<p>
+				<input type="checkbox" name="email" id="email">
+				<label for="email">Email Response Handling <span>(80)</span></label>
+			</p>
+			<p>
+				<input type="checkbox" name="transcription" id="transcription">
+				<label for="transcription">Transcription <span>(307)</span></label>
+			</p>
+			<p>
+				<input type="checkbox" name="admin" id="admin">
+				<label for="admin">Other - Administrative Support</label>
+			</p>
+		</div>
+		<div id="rating">
+			<h3>Client Rating</h3>
+			<p>
+				<input type="radio" name="rating" value="any" id="any">
+				<label for="any">Any stars</label>
+			</p>
+			<p>
+				<input type="radio" name="rating" value="5" id="5">
+				<label for="5">5 stars (930)</label>	
+			</p>
+			<p>
+				<input type="radio" name="rating" value="5" id="4plus">
+				<label for="4plus">4,5 stars and Up (2 591)</label>	
+			</p>
+			<p>
+				<input type="radio" name="rating" value="5" id="4up">
+				<label for="4up">4 stars and Up (1 546)</label>
+			</p>	
+			<input type="checkbox" name="rating" id="unrated">
+			<label for="unrated">Include unrated freelancers (1 784)</label>	
+		</div>
+		<div id="budget">
+			<h3>Budget</h3>
+			<select class="chosen-select">
+				<option>Any Budget</option>
+			</select>
+		</div>
+		<div id="delivery">
+			<h3>Delivery</h3>
+			<select class="chosen-select">
+				<option>Any</option>
+			</select>
+		</div>
+		<div id="location">
+			<h3>Location</h3>
+			<select class="chosen-select">
+				<option>Any Location</option>
+			</select>
+		</div>
+	</aside>
+
+	<main class="md-col9 list" id="item">
+	
+	</main>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="chosen/chosen.jquery.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
